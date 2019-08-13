@@ -1,7 +1,7 @@
 'use strict';
 
 var firstStore = {
-  location: 'FirstAndPike',
+  location: '1st and Pike',
   maxCustomNum: 65,
   minCustomNum: 23,
   averageCookieSale: 6.3,
@@ -39,7 +39,7 @@ var secondStore = {
     return this.averageCookieSale * random;
   },
   dailyCookiesPerHour: [],
-}
+};
 
 var thirdStore = {
   location: 'Seattle Center',
@@ -53,7 +53,7 @@ var thirdStore = {
     return this.averageCookieSale * random;
   },
   dailyCookiesPerHour: [],
-}
+};
 
 var fourthStore = {
   location:'Capitol Hill',
@@ -67,7 +67,7 @@ var fourthStore = {
     return this.averageCookieSale * random;
   },
   dailyCookiesPerHour: [],
-}
+};
 
 var fifthStore = {
   location: 'Alki',
@@ -81,19 +81,31 @@ var fifthStore = {
     return this.averageCookieSale * random;
   },
   dailyCookiesPerHour: [],
-}
+};
 
-var firstStore = {
-  location: 'Alki',
-  maxCustomNum: 65,
-  minCustomNum: 23,
-  averageCookieSale: 6.3,
-  cookiesPerHour: function() {
-    // console.log(this.averageCookieSale);
-    var random = getRandomIntInclusive(this.maxCustomNum, this.minCustomNum);
-    // console.log(random);
-    return this.averageCookieSale * random;
-  },
-  dailyCookiesPerHour: [],
-}
+var title = document.getElementById('pageName');
+title.textContent = firstStore.location;
 
+// Find the UL
+var elementList = document.getElementById('list');
+
+
+
+//  iterate over the dailyCookiesPerHour and add the hour
+//  Create an LI
+// Set the textContent to the name of the child
+// Append LI as a Child to UL
+var hour = 6;
+var hourPm = 0;
+for (var j = 0; j < firstStore.dailyCookiesPerHour.length; j++) {
+  var newListItem = document.createElement('li');
+  if (hour > 12){
+    hourPm += 1;
+    newListItem.textContent = 'Sold cookies at: ' + hourPm + ' pm: ' +  firstStore.dailyCookiesPerHour[j];
+  } else{
+    newListItem.textContent = 'Sold cookies at: ' + hour + ' am: ' +  firstStore.dailyCookiesPerHour[j];
+  }
+  elementList.appendChild(newListItem);
+  hour += 1;
+  
+}

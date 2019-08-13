@@ -114,15 +114,30 @@ function printStore(store) {
     var newListItem = document.createElement('li');
     if (hour > 12){
       hourPm += 1;
-      newListItem.textContent = 'Sold cookies at: ' + hourPm + ' pm: ' + store.dailyCookiesPerHour[j];
+      newListItem.textContent = hourPm + ' pm: ' + store.dailyCookiesPerHour[j] + ' cookies';
     } else{
-      newListItem.textContent = 'Sold cookies at: ' + hour + ' am: ' + store.dailyCookiesPerHour[j];
+      newListItem.textContent = + hour + ' am: ' + store.dailyCookiesPerHour[j] + ' cookies';
     }
     newlist.appendChild(newListItem);
     hour += 1;
-
   }
+  newListItem = document.createElement('li');
+  newListItem.textContent = 'Total ' + CookiesTotal(store.dailyCookiesPerHour) + ' cookies';
+  newlist.appendChild(newListItem);
 }
+
+// argument is going to be ex. fififthStore.dailyCookiesPerHour
+
+function CookiesTotal(list){
+  var sum = 0;
+  for (var i = 0; i < list.length; i++){
+    sum += list[i];
+  }
+  return sum;
+}
+
+// CookiesTotal(policz);
+
 
 
 createsNewHeading(firstStore);

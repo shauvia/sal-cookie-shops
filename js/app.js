@@ -1,5 +1,16 @@
 'use strict';
 
+function createsArrayOfSoldCoockies(store){
+  for (var i = 0; i < 15 ; i++) {
+    store.dailyCookiesPerHour.push(store.cookiesPerHour());
+  }
+}
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+}
+
 var firstStore = {
   location: '1st and Pike',
   maxCustomNum: 65,
@@ -12,20 +23,9 @@ var firstStore = {
     return this.averageCookieSale * random;
   },
   dailyCookiesPerHour: [],
-}
+};
 
 
-for (var i = 0; i < 15 ; i++) {
-  console.log(firstStore.dailyCookiesPerHour);
-  firstStore.dailyCookiesPerHour.push(firstStore.cookiesPerHour());
-}
-console.log( firstStore.dailyCookiesPerHour);
-
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
-}
 
 var secondStore = {
   location: 'SeaTac Airport',
@@ -83,29 +83,59 @@ var fifthStore = {
   dailyCookiesPerHour: [],
 };
 
-var title = document.getElementById('pageName');
-title.textContent = firstStore.location;
 
-// Find the UL
-var elementList = document.getElementById('list');
+createsArrayOfSoldCoockies(firstStore);
+
+createsArrayOfSoldCoockies(secondStore);
+
+createsArrayOfSoldCoockies(thirdStore);
+
+createsArrayOfSoldCoockies(fourthStore);
+
+createsArrayOfSoldCoockies(fifthStore);
 
 
 
-//  iterate over the dailyCookiesPerHour and add the hour
-//  Create an LI
-// Set the textContent to the name of the child
-// Append LI as a Child to UL
-var hour = 6;
-var hourPm = 0;
-for (var j = 0; j < firstStore.dailyCookiesPerHour.length; j++) {
-  var newListItem = document.createElement('li');
-  if (hour > 12){
-    hourPm += 1;
-    newListItem.textContent = 'Sold cookies at: ' + hourPm + ' pm: ' +  firstStore.dailyCookiesPerHour[j];
-  } else{
-    newListItem.textContent = 'Sold cookies at: ' + hour + ' am: ' +  firstStore.dailyCookiesPerHour[j];
-  }
-  elementList.appendChild(newListItem);
-  hour += 1;
-  
+function createsNewHeading (store){ 
+  var storeElement = document.getElementById('stores');
+  var newHeading = document.createElement('h1');
+  newHeading.textContent = store.location;
+  storeElement.appendChild(newHeading);
 }
+
+
+function printStore(store) {
+  var storeElement = document.getElementById('stores');
+  var newlist = document.createElement('ul');
+  storeElement.appendChild(newlist);
+  var hour = 6;
+  var hourPm = 0;
+  for (var j = 0; j < store.dailyCookiesPerHour.length; j++) {
+    var newListItem = document.createElement('li');
+    if (hour > 12){
+      hourPm += 1;
+      newListItem.textContent = 'Sold cookies at: ' + hourPm + ' pm: ' + store.dailyCookiesPerHour[j];
+    } else{
+      newListItem.textContent = 'Sold cookies at: ' + hour + ' am: ' + store.dailyCookiesPerHour[j];
+    }
+    newlist.appendChild(newListItem);
+    hour += 1;
+
+  }
+}
+
+
+createsNewHeading(firstStore);
+printStore(firstStore);
+
+createsNewHeading(secondStore);
+printStore(secondStore);
+
+createsNewHeading(thirdStore);
+printStore(thirdStore);
+
+createsNewHeading(fourthStore);
+printStore(fourthStore);
+
+createsNewHeading(fifthStore);
+printStore(fifthStore);

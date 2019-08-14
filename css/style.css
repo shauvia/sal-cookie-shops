@@ -1,0 +1,31 @@
+table {
+  margin: auto;
+  /* width: 600px; */
+}
+
+table thead {
+  background: beige;
+  color: brown;
+}
+
+table tbody {
+  background: rgb(245, 203, 89);
+}
+
+table tfoot {
+  background: rgb(224, 175, 39)
+}
+
+table tfoot td {
+  text-align: center;
+}
+
+table th, table td {
+  padding: 0.5em;
+  width: 3em;
+}
+
+table tbody tr:hover{
+  background: rgb(134, 128, 128);
+  color: #fff;
+}

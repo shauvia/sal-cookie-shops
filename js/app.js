@@ -145,6 +145,8 @@ function totalForAllHours(){
     footerData.textContent = totalForOneHour(i); //call function totalForOneHour that creates vertical sum of cookies
     footerRow.appendChild(footerData);
   }
+  footerData = document.createElement('th');
+  footerRow.appendChild(footerData);
 }
 
 // console.log(totalForAllHours());
@@ -162,6 +164,7 @@ function getFormData(event){
   var averageCookieSale = event.target.aver_cookies.value;
 
   var newStore = new Store(location, maxCustomNum, minCustomNum, averageCookieSale);
+  console.log(newStore);
   addsStoretoTableRow(newStore);
 
   var tfoot = document.getElementById('tableFooter');

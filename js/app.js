@@ -169,7 +169,7 @@ function getFormData(event){
 
   var tfoot = document.getElementById('tableFooter');
   var removeEl = tfoot.getElementsByTagName('tr')[0];
-  console.log("remove " + removeEl);
+  console.log('remove ' + removeEl);
   var containerEl = removeEl.parentNode;
   containerEl.removeChild(removeEl);
   // addsAllStoresToTable();

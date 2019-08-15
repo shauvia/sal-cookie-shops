@@ -68,11 +68,8 @@ function cookiesTotal(list){
 // write code to display these computed values.
 
 
-// for (i = 0; i<Store.allStores.length; i++) {
-//   console.log(Store.allStores[i]);
-// }
 
-// function creates the tble row and ads the hours to header table row and Total per store at the end; created horizontal table header;
+// function creates the table row and ads the hours to header table row and Total per store at the end; created horizontal table header;
 function addsHoursToHeader(){
   var getHeader = document.getElementById('header');
   var headerRow = document.createElement('tr');
@@ -150,5 +147,32 @@ function totalForAllHours(){
 }
 
 console.log(totalForAllHours());
+
+// Event something:
+var form = document.getElementById('new_store');
+// var newStoreRow = getElementById('table_body'); //could go with tfoot as well if it doesn't work
+
+function getFormData(event){
+  event.preventDefault();
+
+  var location = event.target.location.value;
+  var maxCustomNum = parseInt(event.target.max_number.value);
+  var minCustomNum = event.target.min_number.value;
+  var averageCookieSale = event.target.aver_cookies.value;
+
+  var newStore = new Store(location, maxCustomNum, minCustomNum, averageCookieSale);
+  addsStoretoTableRow(newStore);
+  // addsAllStoresToTable();
+  form.reset;
+
+  // location, maxCustomNum, minCustomNum, averageCookieSale
+}
+
+
+
+form.addEventListener('submit', getFormData);
+
+console.log(Store.allStores);
+
 
 

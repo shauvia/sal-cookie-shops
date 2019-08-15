@@ -131,7 +131,7 @@ function totalForOneHour(hour){
   return total;
 }
 
-// creates sum for coockies sold per hour in all locations;
+// creates sum for cookies sold per hour in all locations for all hours
 function totalForAllHours(){
   var getTableFooter = document.getElementById('tableFooter');
   var footerRow = document.createElement('tr');
@@ -139,6 +139,7 @@ function totalForAllHours(){
   var footerData = document.createElement('th');
   footerData.textContent = 'Total per hour';
   footerRow.appendChild(footerData);
+  console.log('wywolalam się');
   for (var i = 0; i <15; i++){
     footerData = document.createElement('td');
     footerData.textContent = totalForOneHour(i); //call function totalForOneHour that creates vertical sum of cookies
@@ -146,7 +147,7 @@ function totalForAllHours(){
   }
 }
 
-console.log(totalForAllHours());
+// console.log(totalForAllHours());
 
 // Event something:
 var form = document.getElementById('new_store');
@@ -162,11 +163,20 @@ function getFormData(event){
 
   var newStore = new Store(location, maxCustomNum, minCustomNum, averageCookieSale);
   addsStoretoTableRow(newStore);
+
+  var tfoot = document.getElementById('tableFooter');
+  var removeEl = tfoot.getElementsByTagName('tr')[0];
+  console.log("remove " + removeEl);
+  var containerEl = removeEl.parentNode;
+  containerEl.removeChild(removeEl);
   // addsAllStoresToTable();
+  totalForAllHours();
   form.reset;
 
   // location, maxCustomNum, minCustomNum, averageCookieSale
 }
+
+totalForAllHours();
 
 
 

@@ -8,55 +8,59 @@
 </head>
 
 <header>
-<h1>Cookie Sales Prediction</h1>
+  <div>
+    <img src="/img/salmon.png"/ class='logo'> 
+    <h1>Pat's Salmon Cookies</h1>
+    <img src="/img/chinook2.png"/ class='logo'>
+  </div>
+  <nav>
+      <ul>
+        <li> <a href='/index.html'>Home Page</a></li>
+      </ul>
+  </nav>
 </header>
 
-<nav>
-    <ul>
-      <li> <a href='/index.html'>Home Page</a></li>
-      <li> <a  href='/pages/sales.html'>Cookies Sale Prediction</a></li>
-    </ul>
-</nav>
-
 <body>
+  <main>
+    <article>
+      <table>
+        <thead id="header">
+        </thead>
+        <tbody id="table_body">
+        </tbody>
+        <tfoot id="tableFooter">
+        <tfoot>
+      </table>
 
-  </article>
+    </article>
 
-  <article>
-    <table>
-      <thead id="header">
-      </thead>
-      <tbody id="table_body">
-      </tbody>
-      <tfoot id="tableFooter">
-      <tfoot>
-    </table>
+    <div class="store_form">
+      <form id='new_store'>
+        <fieldset>
+            <label for='location'>Store location:</label>
+            <input type='text' name='location' placeholder='enter a location' maxlength='15' required> 
+        </fieldset>
+        <fieldset>
+          <label for='max_number'>Max number of clients:</label>
+          <input type='number' name='max_number' placeholder='enter a number' required> <!-- how to check validate that it is a number? -->
+        </fieldset>
+        <fieldset>
+            <label for='min_number'>Min number of clients:</label>
+            <input type='number' name='min_number' placeholder='enter a number' required> <!-- how to check validate that it is a number? Even with type number it takes a putsa a string-->
+        </fieldset>
+        <fieldset>
+          <label for='aver_cookies'>Average number cookies per hour:</label>
+          <input type='number' step="0.01" name='aver_cookies'  placeholder='enter a number' required> <!-- how to check validate that it is a number? -->
+        </fieldset>
 
-  </article>
+        <div class="submit">
+        <button id='submit_btn type='submit'>Submit</button> 
+        </div>
+      
+      </form>
+    </div>
 
-  <form id='new_store'>
-    <fieldset>
-        <label for='location'>Store location:</label>
-        <input type='text' name='location' placeholder='enter a location' maxlength='15' required> 
-    </fieldset>
-    <fieldset>
-      <label for='max_number'>Max number of clients:</label>
-      <input type='number' name='max_number' placeholder='enter a number' required> <!-- how to check validate that it is a number? -->
-    </fieldset>
-    <fieldset>
-        <label for='min_number'>Min number of clients:</label>
-        <input type='number' name='min_number' placeholder='enter a number' required> <!-- how to check validate that it is a number? Even with type number it takes a putsa a string-->
-    </fieldset>
-    <fieldset>
-      <label for='aver_cookies'>Average number cookies per hour:</label>
-      <input type='number' step="0.01" name='aver_cookies'  placeholder='enter a number' required> <!-- how to check validate that it is a number? -->
-  </fieldset>
-
-
-  
-    <button id='submit_btn type='submit'>Submit</button> 
-  
-  </form>
+</main>
 
   <script src="/js/app.js"></script>
 <!--  -->

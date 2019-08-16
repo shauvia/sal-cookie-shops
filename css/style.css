@@ -1,3 +1,96 @@
+header{
+  background: #ccc;
+}
+main{
+  background: #ddd;
+}
+
+header>div {
+  text-align: center;
+}
+.logo{
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center
+}
+
+nav {
+  width: 100%;
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+nav li{
+  display: inline-block;
+  width: 16%;
+  /* margin:0; */
+  /* border: 1px solid red; */
+  text-align: center;
+  background-color: rgb(238, 187, 124);
+  box-shadow: 0 0 10px rgb(199, 114, 17);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+nav li a {
+  display:block;
+
+}
+
+section{
+  text-align: center;
+  /* margin: 20px; */
+}
+
+section>h2 {
+border-bottom: 1px solid rgb(230, 145, 48);
+border-top: 1px solid rgb(230, 145, 48);
+font-size: 120%;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+
+section>img{
+  width: 300px;
+  /* margin:20px; */
+}
+
+section>p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cookies{
+  display: inline-block;
+}
+
+form{
+  width:400px;
+  background-color: rgb(238, 187, 124);
+  margin-top: 20px;
+  display:inline-block; 
+}
+fieldset{
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: right;
+  
+}
+
+.store_form{
+  text-align: center;
+}
+
+.submit{
+  text-align: right;
+}
+
 table {
   margin: auto;
   /* width: 600px; */

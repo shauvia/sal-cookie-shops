@@ -23,13 +23,7 @@ function Store(location, maxCustomNum, minCustomNum, averageCookieSale){
 
 Store.allStores = [];
 
-function calculateGrandTotal(){
-  var grandTotal = 0;
-  for (var i=0; i<Store.allStores.length; i++){
-    grandTotal = grandTotal + Store.allStores[i].sumTotal;
-  }
-  return grandTotal;
-}
+
 
 
 //this function is called in cookiesPerHour and provides random number of customers
@@ -56,6 +50,14 @@ function cookiesTotal(list){
     sum += list[i];
   }
   return sum;
+}
+
+function calculateGrandTotal(){
+  var grandTotal = 0;
+  for (var i=0; i<Store.allStores.length; i++){
+    grandTotal = grandTotal + Store.allStores[i].sumTotal;
+  }
+  return grandTotal;
 }
 
 

@@ -1,3 +1,7 @@
+body{
+  margin:0px auto 0px auto;
+  width: 1000px;
+}
 header{
   background: #ccc;
 }
@@ -25,8 +29,6 @@ nav {
 nav li{
   display: inline-block;
   width: 16%;
-  /* margin:0; */
-  /* border: 1px solid red; */
   text-align: center;
   background-color: rgb(238, 187, 124);
   box-shadow: 0 0 10px rgb(199, 114, 17);
@@ -43,7 +45,6 @@ nav li a {
 
 section{
   text-align: center;
-  /* margin: 20px; */
 }
 
 section>h2 {
@@ -56,15 +57,54 @@ margin-bottom: 10px;
 text-transform: uppercase;
 }
 
-section>img{
+article{
+  overflow: auto;
+  padding: 10px;
+  width: 650px;
+  margin: 0px auto 0px auto;
+}
+
+section img{
   width: 300px;
   /* margin:20px; */
 }
 
-section>p{
+.column_left{
+  float:left;
+  width: 300px;
+  margin: 20px 0px 0px 0;
+}
+
+.column_right{
+  float:right;
+  width: 300px;
+  margin:auto;
+}
+
+
+#our_cookies p{
+  margin: 12px 0px 12px 0px;
+} 
+
+#our_merchandise>ul>{
+  text-align: centered;
+}
+
+#our_merchandise>ul>li{
+  display:inline-block;
+  margin: 0px 10px 0px 0px;
+  /* outline: dotted 2px red; */
+  
+}
+
+#our_merchandise p{
+  /* outline: dotted 2px red; */
   margin-top: 20px;
   margin-bottom: 20px;
-}
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+} */
 
 .cookies{
   display: inline-block;

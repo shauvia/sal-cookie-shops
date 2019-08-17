@@ -18,9 +18,19 @@ function Store(location, maxCustomNum, minCustomNum, averageCookieSale){
     }
   };
   this.populateData();
+  this.sumTotal = cookiesTotal(this.dailyCookiesPerHour);
 }
 
 Store.allStores = [];
+
+function calculateGrandTotal(){
+  var grandTotal = 0;
+  for (var i=0; i<Store.allStores.length; i++){
+    grandTotal = grandTotal + Store.allStores[i].sumTotal;
+  }
+  return grandTotal;
+}
+
 
 //this function is called in cookiesPerHour and provides random number of customers
 function getRandomIntInclusive(min, max) {
@@ -35,10 +45,10 @@ new Store('Seattle Center', 11, 38, 3.7); // thirdStore
 new Store('Capitol Hill', 20, 38, 2.3); // fourthStore
 new Store('Alki', 2, 16, 4.6); //fifthStore
 
+calculateGrandTotal();
 
 
-
-// argument is going to be ex. fififthStore.dailyCookiesPerHour
+// argument is going to be ex. fififthStore.dailyCookiesPerHour; liczy w rzedzie
 
 function cookiesTotal(list){
   var sum = 0;
@@ -146,6 +156,8 @@ function totalForAllHours(){
     footerRow.appendChild(footerData);
   }
   footerData = document.createElement('th');
+  var grandTotal = calculateGrandTotal();
+  footerData.textContent = grandTotal;
   footerRow.appendChild(footerData);
 }
 

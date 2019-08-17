@@ -114,6 +114,7 @@ function addsStoretoTableRow(store){
   getTable_body.appendChild(tableRow);
   var rowData = document.createElement('th');
   rowData.textContent = store.location;
+  rowData.className = 'store_name';
   tableRow.appendChild(rowData);
   for (var i = 0; i<store.dailyCookiesPerHour.length; i++){
     rowData = document.createElement('td');
@@ -123,6 +124,7 @@ function addsStoretoTableRow(store){
   var total = cookiesTotal(store.dailyCookiesPerHour); //calls function cookiesTotal on list dailyCookiesPerHour and calulates day sold cookies for one store
   rowData = document.createElement('td');
   rowData.textContent = total;
+  rowData.className = 'sum';
   tableRow.appendChild(rowData);
 }
 

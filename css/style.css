@@ -1,0 +1,194 @@
+body{
+  margin:0px auto 0px auto;
+  width: 1000px;
+}
+header{
+  background: #ccc;
+}
+main{
+  background: #ddd;
+}
+
+header>div {
+  text-align: center;
+}
+.logo{
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center
+}
+
+nav {
+  width: 100%;
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+nav li{
+  display: inline-block;
+  width: 16%;
+  text-align: center;
+  background-color: rgb(238, 187, 124);
+  box-shadow: 0 0 10px rgb(199, 114, 17);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+nav li a {
+  display:block;
+
+}
+section{
+  text-align: center;
+}
+
+h1{
+  color: salmon;
+  font-size: 3em;
+  font-family: 'Shojumaru', cursive;
+  text-transform: uppercase;
+}
+
+section>h2 {
+border-bottom: 1px solid rgb(230, 145, 48);
+border-top: 1px solid rgb(230, 145, 48);
+font-size: 35px;;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-bottom: 10px;
+text-transform: uppercase;
+color: rgb(204, 99, 87);
+}
+
+article{
+  overflow: auto;
+  padding: 10px;
+  width: 650px;
+  margin: 0px auto 0px auto;
+}
+
+section img{
+  width: 300px;
+  /* margin:20px; */
+}
+
+.column_left{
+  float:left;
+  width: 300px;
+  margin: 20px 0px 0px 0;
+}
+
+.column_right{
+  float:right;
+  width: 300px;
+  margin:auto;
+}
+
+#our_cookies p{
+  margin: 12px 0px 12px 0px;
+} 
+
+#our_merchandise>ul>{
+  text-align: centered;
+}
+
+#our_merchandise>ul>li{
+  display:inline-block;
+  margin: 0px 10px 0px 0px;
+}
+
+#our_merchandise p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.cookies{
+  display: inline-block;
+}
+
+h3{
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2em;
+  margin: 0px 0px 5px 0px;
+}
+
+#contact_us li{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0px 0px 8px 0;
+}
+
+form{
+  width:400px;
+  background-color: rgb(238, 187, 124);
+  margin-top: 20px;
+  display:inline-block; 
+}
+fieldset{
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: right;
+  
+}
+
+.store_form{
+  text-align: center;
+}
+
+.submit{
+  text-align: right;
+}
+
+table {
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+table thead th {
+  background: rgb(231, 176, 105);
+  color: brown;
+  /* padding: 10px 0px 0px 0px; */
+  
+}
+
+table tbody {
+  background: rgb(245, 203, 89);
+  vertical-align: middle;
+}
+ 
+table tfoot {
+  background:beige;
+  font-family: 'Oswald', sans-serif;
+}
+
+table tfoot td {
+  vertical-align: middle;
+}
+
+table th, td {
+  padding: 0.5em;
+  width: 5em;
+  vertical-align: middle;
+}
+
+th{
+  font-family: 'Oswald', sans-serif;
+}
+
+.sum, .store_name{
+  background: rgb(241, 235, 177);
+  font-family: 'Oswald', sans-serif;
+}
+/* th:hover, tr:hover{
+  background: rgb(134, 128, 128);
+  color: #fff;
+} */
